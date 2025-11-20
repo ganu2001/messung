@@ -1,0 +1,37 @@
+Block Type :- UDFB Block
+Inputs : 2
+Outputs : 4
+UDFBName : DIGITALSTAGES
+DataType:Real Name:DIGITALSTAGES Text:AI_IN Type:Input
+DataType:Bool Name:DIGITALSTAGES Text:Enable_IN Type:Input
+DataType:Bool Name:DIGITALSTAGES Text:DO_1 Type:Output
+DataType:Bool Name:DIGITALSTAGES Text:DO_2 Type:Output
+DataType:Bool Name:DIGITALSTAGES Text:DO_3 Type:Output
+DataType:Bool Name:DIGITALSTAGES Text:DO_4 Type:Output
+ (  ) = (Enable_IN AND [FN:GE TC:- EN:Enabled  IN:AI_IN IN:20.0 DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:006]);======SET Output1
+ ( DO_1{S} ) = (DO_S1);======Comments
+ (  ) = (Enable_IN AND [FN:GE TC:- EN:Enabled  IN:AI_IN IN:45.0 DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:007]);======SET Output2
+ ( DO_2{S} ) = (DO_S2);======Comments
+ (  ) = (Enable_IN AND [FN:GE TC:- EN:Enabled  IN:AI_IN IN:70.0 DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:008]);======SET Output3
+ ( DO_3{S} ) = (DO_S3);======Comments
+ (  ) = (Enable_IN AND [FN:GE TC:- EN:Enabled  IN:AI_IN IN:95.0 DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:009]);======SET Output4
+ ( DO_4{S} ) = (DO_S4);======Comments
+ (  ) = (Enable_IN AND [FN:LE TC:- EN:Enabled  IN:AI_IN IN:5.0 DT:0005 DTN:Real OPC:0145 OPT:02 OPTN:Memory  OP:F2:010]);======RESET Output1
+ ( DO_1{R} ) = (DO_R1);======Comments
+ (  ) = (Enable_IN AND [FN:LE TC:- EN:Enabled  IN:AI_IN IN:30.0 DT:0005 DTN:Real OPC:0145 OPT:02 OPTN:Memory  OP:F2:011]);======RESET Output2
+ ( DO_2{R} ) = (DO_R2);======Comments
+ (  ) = (Enable_IN AND [FN:LE TC:- EN:Enabled  IN:AI_IN IN:55.0 DT:0005 DTN:Real OPC:0145 OPT:02 OPTN:Memory  OP:F2:012]);======RESET Output3
+ ( DO_3{R} ) = (DO_R3);======Comments
+ (  ) = (Enable_IN AND [FN:LE TC:- EN:Enabled  IN:AI_IN IN:80.0 DT:0005 DTN:Real OPC:0145 OPT:02 OPTN:Memory  OP:F2:013]);======RESET Output4
+ ( DO_4{R} ) = (DO_R4);======Comments
+ ( DO_1{R}, DO_2{R}, DO_3{R}, DO_4{R} ) = (~Enable_IN);======Comments
+User Defined Tags
+Model: DIGITALSTAGES Tags, Label: Bool, LogicalAddress: F2:005, Tag: DO_S, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 96, ActualName: 
+Model: DIGITALSTAGES Tags, Label: Bool, LogicalAddress: F2:006, Tag: DO_S1, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 97, ActualName: 
+Model: DIGITALSTAGES Tags, Label: Bool, LogicalAddress: F2:007, Tag: DO_S2, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 98, ActualName: 
+Model: DIGITALSTAGES Tags, Label: Bool, LogicalAddress: F2:008, Tag: DO_S3, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 99, ActualName: 
+Model: DIGITALSTAGES Tags, Label: Bool, LogicalAddress: F2:009, Tag: DO_S4, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 100, ActualName: 
+Model: DIGITALSTAGES Tags, Label: Bool, LogicalAddress: F2:010, Tag: DO_R1, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 101, ActualName: 
+Model: DIGITALSTAGES Tags, Label: Bool, LogicalAddress: F2:011, Tag: DO_R2, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 102, ActualName: 
+Model: DIGITALSTAGES Tags, Label: Bool, LogicalAddress: F2:012, Tag: DO_R3, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 103, ActualName: 
+Model: DIGITALSTAGES Tags, Label: Bool, LogicalAddress: F2:013, Tag: DO_R4, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 104, ActualName: 

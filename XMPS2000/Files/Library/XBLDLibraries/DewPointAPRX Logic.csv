@@ -1,0 +1,29 @@
+Block Type :- UDFB Block
+Inputs : 2
+Outputs : 1
+UDFBName : DewPointAPRX
+DataType:Real Name:DewPointAPRX Text:HMD_DPA Type:Input
+DataType:Real Name:DewPointAPRX Text:Temp_DPA Type:Input
+DataType:Real Name:DewPointAPRX Text:DewPAPRX Type:Output
+ (  ) = ([FN:MUL TC:- EN:-  IN:Temp_DPA IN:17.625 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:015]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:Temp_DPA IN:243.04 DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:016]);======Comments
+ (  ) = ([FN:DIV TC:- EN:-  IN:P5:015 IN:P5:016 DT:0005 DTN:Real OPC:0075 OPT:02 OPTN:Memory  OP:P5:017]);======Comments
+ (  ) = ([FN:DIV TC:- EN:-  IN:HMD_DPA IN:100.0 DT:0005 DTN:Real OPC:0075 OPT:02 OPTN:Memory  OP:P5:018]);======Comments
+ (  ) = ([FN:SUB TC:- EN:-  IN:1.0 IN:P5:018 DT:0005 DTN:Real OPC:0055 OPT:02 OPTN:Memory  OP:P5:019]);======Comments
+ (  ) = ([FN:MUL TC:- EN:-  IN:P5:019 IN:4.605 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:028]);======Comments
+ (  ) = ([FN:SUB TC:- EN:Enabled  IN:0.0 IN:P5:028 DT:0005 DTN:Real OPC:0055 OPT:02 OPTN:Memory  OP:P5:020]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:017 IN:P5:020 DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:021]);======Comments
+ (  ) = ([FN:MUL TC:- EN:-  IN:243.04 IN:P5:021 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:022]);======Comments
+ (  ) = ([FN:SUB TC:- EN:-  IN:17.625 IN:P5:021 DT:0005 DTN:Real OPC:0055 OPT:02 OPTN:Memory  OP:P5:023]);======Comments
+ (  ) = ([FN:DIV TC:- EN:-  IN:P5:022 IN:P5:023 DT:0005 DTN:Real OPC:0075 OPT:02 OPTN:Memory  OP:DewPAPRX]);======Comments
+User Defined Tags
+Model: DewPointAPRX Tags, Label: Real, LogicalAddress: P5:015, Tag: TempMul, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 314, ActualName: 
+Model: DewPointAPRX Tags, Label: Real, LogicalAddress: P5:016, Tag: TempAdd, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 315, ActualName: 
+Model: DewPointAPRX Tags, Label: Real, LogicalAddress: P5:017, Tag: A_Term, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 316, ActualName: 
+Model: DewPointAPRX Tags, Label: Real, LogicalAddress: P5:018, Tag: RH_Fraction, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 317, ActualName: 
+Model: DewPointAPRX Tags, Label: Real, LogicalAddress: P5:019, Tag: RH_Gap, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 318, ActualName: 
+Model: DewPointAPRX Tags, Label: Real, LogicalAddress: P5:020, Tag: LnApprox, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 319, ActualName: 
+Model: DewPointAPRX Tags, Label: Real, LogicalAddress: P5:021, Tag: Gamma_Term, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 320, ActualName: 
+Model: DewPointAPRX Tags, Label: Real, LogicalAddress: P5:023, Tag: Denomi_nator, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 322, ActualName: 
+Model: DewPointAPRX Tags, Label: Real, LogicalAddress: P5:022, Tag: Nume_rator, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 321, ActualName: 
+Model: DewPointAPRX Tags, Label: Real, LogicalAddress: P5:028, Tag: TempLn, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 327, ActualName: 

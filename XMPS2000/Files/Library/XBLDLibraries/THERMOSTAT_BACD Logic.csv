@@ -1,0 +1,42 @@
+Block Type :- UDFB Block
+Inputs : 4
+Outputs : 2
+UDFBName : THERMOSTAT_BACD
+DataType:Real Name:THERMOSTAT_BACD Text:Input Type:Input
+DataType:Real Name:THERMOSTAT_BACD Text:SetPoint Type:Input
+DataType:Real Name:THERMOSTAT_BACD Text:Deadband Type:Input
+DataType:Word Name:THERMOSTAT_BACD Text:DeabBand_Type Type:Input
+DataType:Bool Name:THERMOSTAT_BACD Text:Direct Type:Output
+DataType:Bool Name:THERMOSTAT_BACD Text:Reverse Type:Output
+ (  ) = ([FN:EQ TC:- EN:Enabled  IN:DeabBand_Type IN:0 DT:0002 DTN:Word OPC:0152 OPT:02 OPTN:Memory  OP:F2:098]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:DeabBand_Type IN:1 DT:0002 DTN:Word OPC:0152 OPT:02 OPTN:Memory  OP:F2:101]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:DeabBand_Type IN:2 DT:0002 DTN:Word OPC:0152 OPT:02 OPTN:Memory  OP:F2:102]);======Comments
+ (  ) = (Above_Mode AND [FN:ADD TC:- EN:Enabled  IN:SetPoint IN:Deadband DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:110]);======Comments
+ (  ) = (Above_Mode AND [FN:GE TC:- EN:Enabled  IN:Input IN:P5:110 DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:099]);======Comments
+ (  ) = (Above_Mode AND  Direct AND [FN:LE TC:- EN:Enabled  IN:Input IN:SetPoint DT:0005 DTN:Real OPC:0145 OPT:02 OPTN:Memory  OP:F2:100]);======Comments
+ ( Direct{S} ) = (((Above_OP_DN AND  Above_Mode ) OR ( Below_OP_DN AND Below_Mode ) OR ( Centerized_OP_DN AND Centerized_Mode ) ) );======Comments
+ ( Reverse ) = (~Direct);======Comments
+ ( Direct{R} ) = (((Above_OP_Not_DN AND  Above_Mode ) OR ( Below_OP_Not_DN AND Below_Mode ) OR ( Centerized_OP_Not_DN AND Centerized_Mode ) ) );======Comments
+ (  ) = (Centerized_Mode AND [FN:DIV TC:- EN:Enabled  IN:Deadband IN:2 DT:0005 DTN:Real OPC:0075 OPT:02 OPTN:Memory  OP:P5:111]);======Comments
+ (  ) = (Centerized_Mode AND [FN:ADD TC:- EN:Enabled  IN:SetPoint IN:P5:111 DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:112]);======Comments
+ (  ) = (Centerized_Mode AND [FN:GE TC:- EN:Enabled  IN:Input IN:P5:112 DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:103]);======Comments
+ (  ) = (Centerized_Mode AND [FN:SUB TC:- EN:Enabled  IN:SetPoint IN:P5:111 DT:0005 DTN:Real OPC:0055 OPT:02 OPTN:Memory  OP:P5:113]);======Comments
+ (  ) = (Centerized_Mode AND  Direct AND [FN:LE TC:- EN:Enabled  IN:Input IN:P5:113 DT:0005 DTN:Real OPC:0145 OPT:02 OPTN:Memory  OP:F2:104]);======Comments
+ (  ) = (Below_Mode AND [FN:GE TC:- EN:Enabled  IN:Input IN:SetPoint DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:105]);======Comments
+ (  ) = (Below_Mode AND [FN:SUB TC:- EN:Enabled  IN:SetPoint IN:Deadband DT:0005 DTN:Real OPC:0055 OPT:02 OPTN:Memory  OP:P5:114]);======Comments
+ (  ) = (Below_Mode AND  Direct AND [FN:LE TC:- EN:Enabled  IN:Input IN:P5:114 DT:0005 DTN:Real OPC:0145 OPT:02 OPTN:Memory  OP:F2:106]);======Comments
+User Defined Tags
+Model: THERMOSTAT_BACD Tags, Label: Real, LogicalAddress: P5:110, Tag: SP_DB_Addition, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 275, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Bool, LogicalAddress: F2:099, Tag: Above_OP_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 276, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Bool, LogicalAddress: F2:100, Tag: Above_OP_Not_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 277, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Bool, LogicalAddress: F2:101, Tag: Centerized_Mode, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 278, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Bool, LogicalAddress: F2:102, Tag: Below_Mode, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 279, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Bool, LogicalAddress: F2:098, Tag: Above_Mode, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 274, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Real, LogicalAddress: P5:111, Tag: Deadband_DIV_2, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 280, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Real, LogicalAddress: P5:112, Tag: SP_Deadband_Div2_Add, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 281, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Bool, LogicalAddress: F2:103, Tag: Centerized_OP_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 282, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Bool, LogicalAddress: F2:104, Tag: Centerized_OP_Not_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 284, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Real, LogicalAddress: P5:113, Tag: SP_Deadband_Div_Minu, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 283, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Bool, LogicalAddress: F2:105, Tag: Below_OP_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 285, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Real, LogicalAddress: P5:114, Tag: SP_MIN_DB, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 286, ActualName: 
+Model: THERMOSTAT_BACD Tags, Label: Bool, LogicalAddress: F2:106, Tag: Below_OP_Not_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 287, ActualName: 

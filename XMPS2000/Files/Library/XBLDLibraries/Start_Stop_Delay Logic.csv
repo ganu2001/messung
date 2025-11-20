@@ -1,0 +1,38 @@
+Block Type :- UDFB Block
+Inputs : 4
+Outputs : 2
+UDFBName : Start_Stop_Delay
+DataType:Bool Name:Start_Stop_Delay Text:IN_SSD Type:Input
+DataType:Bool Name:Start_Stop_Delay Text:EN_SSD Type:Input
+DataType:Word Name:Start_Stop_Delay Text:START_DL Type:Input
+DataType:Word Name:Start_Stop_Delay Text:STOP_DL Type:Input
+DataType:Bool Name:Start_Stop_Delay Text:OUT_SSD Type:Output
+DataType:Word Name:Start_Stop_Delay Text:RemTime_SSD Type:Output
+ ( RisingEdge_ssd ) = (IN_SSD AND  ~PrevInput1);======Comments
+ ( FallingEdge_ssd ) = (~IN_SSD AND  PrevInput1);======Comments
+ ( PrevInput1 ) = (~IN_SSD);======Comments
+ ( ONSTARTDL ) = (EN_SSD AND  RisingEdge_ssd AND  ~OUT_SSD);======Comments
+ (  ) = ([FN:1s@TON TC:T208 EN:-  IN:F2:082 IN:START_DL DT:0006 DTN:TON OPC:01D6 OPT:02 OPTN:Memory  OP:F2:080 OP:T6:009]);======Comments
+ ( ONSTOPDL ) = (EN_SSD AND  FallingEdge_ssd AND  OUT_SSD);======Comments
+ (  ) = ([FN:1s@TON TC:T209 EN:Enabled  IN:F2:083 IN:STOP_DL DT:0006 DTN:TON OPC:01D6 OPT:02 OPTN:Memory  OP:F2:081 OP:T6:010]);======Comments
+ ( OUT_SSD{S} ) = (EN_SSD AND  IN_SSD AND  StartDL_Done);======Comments
+ ( OUT_SSD{R} ) = (EN_SSD AND  ~IN_SSD AND  StopDL_Done);======Comments
+ ( OUT_SSD{S} ) = (~EN_SSD AND  IN_SSD);======Comments
+ ( OUT_SSD{R} ) = (~EN_SSD AND  ~IN_SSD);======Comments
+ (  ) = (ONSTOPDL AND [FN:MOV TC:- EN:-  IN:T6:010 DT:0002 DTN:Word OPC:0092 OPT:02 OPTN:Memory  OP:RemTime_SSD]);======Comments
+ (  ) = (~ONSTOPDL AND  ONSTARTDL AND [FN:MOV TC:- EN:-  IN:T6:009 DT:0002 DTN:Word OPC:0092 OPT:02 OPTN:Memory  OP:RemTime_SSD]);======Comments
+ (  ) = (~ONSTARTDL AND  ~ONSTOPDL AND [FN:MOV TC:- EN:Enabled  IN:0 DT:0002 DTN:Word OPC:0092 OPT:02 OPTN:Memory  OP:RemTime_SSD]);======Comments
+User Defined Tags
+Model: Start_Stop_Delay Tags, Label: Bool, LogicalAddress: F2:077, Tag: PrevInput1, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 198, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Bool, LogicalAddress: F2:078, Tag: RisingEdge_ssd, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 199, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Bool, LogicalAddress: F2:079, Tag: FallingEdge_ssd, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 200, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Bool, LogicalAddress: F2:080, Tag: StartDL_Done, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 201, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Word, LogicalAddress: T6:009, Tag: StartDL_ET, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 202, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Bool, LogicalAddress: F2:081, Tag: StopDL_Done, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 203, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Word, LogicalAddress: T6:010, Tag: StopDL_ET, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 204, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Bool, LogicalAddress: F2:082, Tag: ONSTARTDL, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 208, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Bool, LogicalAddress: F2:083, Tag: ONSTOPDL, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 209, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Bool, LogicalAddress: F2:084, Tag: ET_STARTDL, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 210, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Bool, LogicalAddress: F2:085, Tag: ET_STOPDL, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 211, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Bool, LogicalAddress: F2:086, Tag: STA_0, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 212, ActualName: 
+Model: Start_Stop_Delay Tags, Label: Bool, LogicalAddress: F2:087, Tag: STO_0, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 213, ActualName: 

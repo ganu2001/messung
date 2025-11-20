@@ -1,0 +1,9 @@
+Block Type :- UDFB Block
+Inputs : 1
+Outputs : 1
+UDFBName : StartupPulseFB
+DataType:Bool Name:StartupPulseFB Text:INSP Type:Input
+DataType:Bool Name:StartupPulseFB Text:STAPL Type:Output
+ ( STAPL ) = (STATUS_FIRST_SCAN_R);======Comments
+User Defined Tags
+Model: StartupPulseFB Tags, Label: Bool, LogicalAddress: F2:108, Tag: IN_STPL, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 249, ActualName: 

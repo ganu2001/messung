@@ -1,0 +1,15 @@
+Block Type :- UDFB Block
+Inputs : 2
+Outputs : 1
+UDFBName : WetBulb
+DataType:Real Name:WetBulb Text:Temp_Wb Type:Input
+DataType:Real Name:WetBulb Text:Hum_Wb Type:Input
+DataType:Real Name:WetBulb Text:Wet_B Type:Output
+ (  ) = ([FN:MUL TC:- EN:-  IN:Temp_Wb IN:0.33 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:054]);======Comments
+ (  ) = ([FN:MUL TC:- EN:-  IN:Hum_Wb IN:0.45 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:055]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:054 IN:P5:055 DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:056]);======Comments
+ (  ) = ([FN:SUB TC:- EN:-  IN:P5:056 IN:13.0 DT:0005 DTN:Real OPC:0055 OPT:02 OPTN:Memory  OP:Wet_B]);======Comments
+User Defined Tags
+Model: WetBulb Tags, Label: Real, LogicalAddress: P5:054, Tag: TempPart_Wb, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 347, ActualName: 
+Model: WetBulb Tags, Label: Real, LogicalAddress: P5:055, Tag: HumPart, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 348, ActualName: 
+Model: WetBulb Tags, Label: Real, LogicalAddress: P5:056, Tag: WB_Sum, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 349, ActualName: 

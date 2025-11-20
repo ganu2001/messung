@@ -1,0 +1,30 @@
+Block Type :- UDFB Block
+Inputs : 4
+Outputs : 2
+UDFBName : CTU_BACD
+DataType:Word Name:CTU_BACD Text:Mode Type:Input
+DataType:Bool Name:CTU_BACD Text:Count_Input Type:Input
+DataType:Bool Name:CTU_BACD Text:Reset Type:Input
+DataType:Word Name:CTU_BACD Text:Preset_Value Type:Input
+DataType:Bool Name:CTU_BACD Text:Count_Done Type:Output
+DataType:Word Name:CTU_BACD Text:Count_Value Type:Output
+ (  ) = ([FN:EQ TC:- EN:Enabled  IN:Mode IN:0 DT:0002 DTN:Word OPC:0152 OPT:02 OPTN:Memory  OP:F2:008]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Mode IN:1 DT:0002 DTN:Word OPC:0152 OPT:02 OPTN:Memory  OP:F2:009]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Mode IN:2 DT:0002 DTN:Word OPC:0152 OPT:02 OPTN:Memory  OP:F2:011]);======Comments
+ ( Rise_Pulse ) = (RISE_Edge AND  Count_Input{P});======Comments
+ (  ) = (RISE_Edge AND [FN:CTU TC:C0 EN:Enabled  IN:F2:012 IN:Reset IN:Preset_Value DT:0008 DTN:CTU OPC:0198 OPT:02 OPTN:Memory  OP:Count_Done OP:Count_Value]);======Comments
+ ( Fall_Pulse ) = (FALL_Edge AND  Count_Input{N});======Comments
+ (  ) = (FALL_Edge AND [FN:CTU TC:C1 EN:Enabled  IN:F2:013 IN:Reset IN:Preset_Value DT:0008 DTN:CTU OPC:0198 OPT:02 OPTN:Memory  OP:Count_Done OP:Count_Value]);======Comments
+ ( Rise_Both_Mode ) = (BOTH_Edge AND  Count_Input{P});======Comments
+ ( Fall_Both_Mode ) = (BOTH_Edge AND  Count_Input{N});======Comments
+ ( Both_pulses ) = ( (Rise_Both_Mode OR Fall_Both_Mode ));======Comments
+ (  ) = (BOTH_Edge AND [FN:CTU TC:C2 EN:Enabled  IN:F2:021 IN:Reset IN:Preset_Value DT:0008 DTN:CTU OPC:0198 OPT:02 OPTN:Memory  OP:Count_Done OP:Count_Value]);======Comments
+User Defined Tags
+Model: CTU_BACD Tags, Label: Bool, LogicalAddress: F2:008, Tag: RISE_Edge, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 72, ActualName: 
+Model: CTU_BACD Tags, Label: Bool, LogicalAddress: F2:009, Tag: FALL_Edge, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 73, ActualName: 
+Model: CTU_BACD Tags, Label: Bool, LogicalAddress: F2:011, Tag: BOTH_Edge, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 74, ActualName: 
+Model: CTU_BACD Tags, Label: Bool, LogicalAddress: F2:012, Tag: Rise_Pulse, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 75, ActualName: 
+Model: CTU_BACD Tags, Label: Bool, LogicalAddress: F2:013, Tag: Fall_Pulse, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 76, ActualName: 
+Model: CTU_BACD Tags, Label: Bool, LogicalAddress: F2:019, Tag: Rise_Both_Mode, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 87, ActualName: 
+Model: CTU_BACD Tags, Label: Bool, LogicalAddress: F2:020, Tag: Fall_Both_Mode, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 88, ActualName: 
+Model: CTU_BACD Tags, Label: Bool, LogicalAddress: F2:021, Tag: Both_pulses, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 89, ActualName: 

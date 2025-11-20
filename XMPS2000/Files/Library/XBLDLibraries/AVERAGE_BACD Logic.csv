@@ -1,0 +1,23 @@
+Block Type :- UDFB Block
+Inputs : 10
+Outputs : 1
+UDFBName : AVERAGE_BACD
+DataType:Real Name:AVERAGE_BACD Text:Input1 Type:Input
+DataType:Real Name:AVERAGE_BACD Text:Input2 Type:Input
+DataType:Real Name:AVERAGE_BACD Text:Input3 Type:Input
+DataType:Real Name:AVERAGE_BACD Text:Input4 Type:Input
+DataType:Real Name:AVERAGE_BACD Text:Input5 Type:Input
+DataType:Real Name:AVERAGE_BACD Text:Input6 Type:Input
+DataType:Real Name:AVERAGE_BACD Text:Input7 Type:Input
+DataType:Real Name:AVERAGE_BACD Text:Input8 Type:Input
+DataType:Real Name:AVERAGE_BACD Text:Input9 Type:Input
+DataType:Real Name:AVERAGE_BACD Text:Input10 Type:Input
+DataType:Real Name:AVERAGE_BACD Text:Output Type:Output
+ (  ) = ([FN:ADD TC:- EN:Enabled  IN:Input1 IN:Input2 IN:Input3 IN:Input4 DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:097]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:Input5 IN:Input6 IN:Input7 IN:Input8 DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:094]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:Input9 IN:Input10 IN:P5:093 IN:P5:094 DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:095]);======Comments
+ (  ) = ([FN:DIV TC:- EN:Enabled  IN:P5:095 IN:10 DT:0005 DTN:Real OPC:0075 OPT:02 OPTN:Memory  OP:Output]);======Comments
+User Defined Tags
+Model: AVERAGE_BACD Tags, Label: Real, LogicalAddress: P5:094, Tag: Add_2, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 245, ActualName: 
+Model: AVERAGE_BACD Tags, Label: Real, LogicalAddress: P5:093, Tag: Add_1, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 244, ActualName: 
+Model: AVERAGE_BACD Tags, Label: Real, LogicalAddress: P5:095, Tag: Add_3, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 246, ActualName: 
