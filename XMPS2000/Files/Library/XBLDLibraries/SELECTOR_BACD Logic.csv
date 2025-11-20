@@ -1,0 +1,49 @@
+Block Type :- UDFB Block
+Inputs : 2
+Outputs : 10
+UDFBName : SELECTOR_BACD
+DataType:Real Name:SELECTOR_BACD Text:Input Type:Input
+DataType:Int Name:SELECTOR_BACD Text:Select Type:Input
+DataType:Real Name:SELECTOR_BACD Text:Output0 Type:Output
+DataType:Real Name:SELECTOR_BACD Text:Output1 Type:Output
+DataType:Real Name:SELECTOR_BACD Text:Output2 Type:Output
+DataType:Real Name:SELECTOR_BACD Text:Output3 Type:Output
+DataType:Real Name:SELECTOR_BACD Text:Output4 Type:Output
+DataType:Real Name:SELECTOR_BACD Text:Output5 Type:Output
+DataType:Real Name:SELECTOR_BACD Text:Output6 Type:Output
+DataType:Real Name:SELECTOR_BACD Text:Output7 Type:Output
+DataType:Real Name:SELECTOR_BACD Text:Output8 Type:Output
+DataType:Real Name:SELECTOR_BACD Text:Output9 Type:Output
+ (  ) = ([FN:EQ TC:- EN:Enabled  IN:Select IN:0 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:057]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:1 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:058]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:2 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:059]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:3 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:060]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:4 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:061]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:5 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:062]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:6 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:063]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:7 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:064]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:8 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:065]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:9 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:066]);======Comments
+ (  ) = (EQ_0_DN AND [FN:MOV TC:- EN:Enabled  IN:Input DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output0]);======Comments
+ (  ) = (EQ_1_DN AND [FN:MOV TC:- EN:Enabled  IN:Input DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output1]);======Comments
+ (  ) = (EQ_2_DN AND [FN:MOV TC:- EN:Enabled  IN:Input DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output2]);======Comments
+ (  ) = (EQ_3_DN AND [FN:MOV TC:- EN:Enabled  IN:Input DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output3]);======Comments
+ (  ) = (EQ_4_DN AND [FN:MOV TC:- EN:Enabled  IN:Input DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output4]);======Comments
+ (  ) = (EQ_5_DN AND [FN:MOV TC:- EN:Enabled  IN:Input DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output5]);======Comments
+ (  ) = (EQ_6_DN AND [FN:MOV TC:- EN:Enabled  IN:Input DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output6]);======Comments
+ (  ) = (EQ_7_DN AND [FN:MOV TC:- EN:Enabled  IN:Input DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output7]);======Comments
+ (  ) = (EQ_8_DN AND [FN:MOV TC:- EN:Enabled  IN:Input DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output8]);======Comments
+ (  ) = (EQ_9_DN AND [FN:MOV TC:- EN:Enabled  IN:Input DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output9]);======Comments
+User Defined Tags
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:053, Tag: LT_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 166, ActualName: 
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:054, Tag: EQ_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 167, ActualName: 
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:057, Tag: EQ_0_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 178, ActualName: 
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:058, Tag: EQ_1_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 179, ActualName: 
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:059, Tag: EQ_2_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 180, ActualName: 
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:060, Tag: EQ_3_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 181, ActualName: 
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:061, Tag: EQ_4_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 182, ActualName: 
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:062, Tag: EQ_5_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 183, ActualName: 
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:063, Tag: EQ_6_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 184, ActualName: 
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:064, Tag: EQ_7_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 185, ActualName: 
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:065, Tag: EQ_8_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 186, ActualName: 
+Model: SELECTOR_BACD Tags, Label: Bool, LogicalAddress: F2:066, Tag: EQ_9_DN, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 187, ActualName: 

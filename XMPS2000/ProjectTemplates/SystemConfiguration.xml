@@ -1,0 +1,222 @@
+<SystemConfiguration>
+	<DeviceModel Type="XM-14-DT">
+		<Template name="Template">
+			<Ethernet>
+				<TreeNodeText>
+					<Device name="MODBUSTCPServer" maxCount="200" currentCount="0"/>
+					<Device name="MODBUSTCPClient" maxCount="200" currentCount="0"/>
+					<Device name="MQTT" maxCount="10"/>
+				</TreeNodeText>
+			</Ethernet>
+			<RS485>
+				<TreeNodeText>
+					<Device name="MODBUSRTUMaster" maxCount="100" currentCount="0"/>
+					<Device name="MODBUSRTUSlaves" maxCount="100" currentCount="0"/>
+				</TreeNodeText>
+			</RS485>
+		</Template>
+	</DeviceModel>
+	<DeviceModel Type="XM-17-ADT">
+		<Template name="Template">
+			<Ethernet>
+				<TreeNodeText>
+					<Device name="MODBUSTCPServer" maxCount="200" currentCount="0"/>
+					<Device name="MODBUSTCPClient" maxCount="200" currentCount="0"/>
+					<Device name="MQTT" maxCount="10" />
+				</TreeNodeText>
+			</Ethernet>
+			<RS485>
+				<TreeNodeText>
+					<Device name="MODBUSRTUMaster" maxCount="100" currentCount="0"/>
+					<Device name="MODBUSRTUSlaves" maxCount="100" currentCount="0"/>
+				</TreeNodeText>
+			</RS485>
+		</Template>
+	</DeviceModel>
+	<DeviceModel Type="XM-14-DT-HIO">
+		<Template name="Template">
+			<Ethernet>
+				<TreeNodeText>
+					<Device name="MODBUSTCPServer" maxCount="200" currentCount="0"/>
+					<Device name="MODBUSTCPClient" maxCount="200" currentCount="0"/>
+					<Device name="MQTT" maxCount="10" />
+				</TreeNodeText>
+			</Ethernet>
+			<RS485>
+				<TreeNodeText>
+					<Device name="MODBUSRTUMaster" maxCount="100" currentCount="0"/>
+					<Device name="MODBUSRTUSlaves" maxCount="100" currentCount="0"/>
+				</TreeNodeText>
+			</RS485>
+		</Template>
+	</DeviceModel>
+	<DeviceModel Type="XBLD-14">
+		<Template name="Template">
+			<Ethernet>
+				<TreeNodeText>
+					<Device name="MODBUSTCPServer" maxCount="200" currentCount="0"/>
+					<Device name="MODBUSTCPClient" maxCount="200" currentCount="0"/>
+					<Device name="BacNet">
+						<Property name="Device" maxCount="1" currentCount="1"/>
+						<Property name="AnalogInput" maxCount="22" currentCount="0"/>
+						<Property name="AnalogOutput" maxCount="11" currentCount="0"/>
+						<Property name="BinaryInput" maxCount="40" currentCount="0"/>
+						<Property name="BinaryOutput" maxCount="28" currentCount="0"/>
+						<Property name="BinaryValue" maxCount="50" currentCount="0"/>
+						<Property name="AnalogValue" maxCount="90" currentCount="0"/>
+						<Property name="MultiStateValue" maxCount="10" currentCount="0"/>
+						<Property name="Schedule" maxCount="3" currentCount="0"/>
+						<Property name="Calendar" maxCount="2" currentCount="0"/>
+						<Property name="Notification Class" maxCount="3" currentCount="0"/>
+						<Property name="Network Port" maxCount="1" currentCount="1"/>
+					</Device>
+				</TreeNodeText>
+			</Ethernet>
+			<RS485>
+				<TreeNodeText>
+					<Device name="MODBUSRTUMaster" maxCount="100" currentCount="0"/>
+					<Device name="MODBUSRTUSlaves" maxCount="100" currentCount="0"/>
+				</TreeNodeText>
+			</RS485>
+		</Template>
+	</DeviceModel>
+	<DeviceModel Type="XBLD-17">
+		<Template name="Template">
+			<Ethernet>
+				<TreeNodeText>
+					<Device name="MODBUSTCPServer" maxCount="200" currentCount="0"/>
+					<Device name="MODBUSTCPClient" maxCount="200" currentCount="0"/>
+					<Device name="BacNet">
+						<Property name="Device" maxCount="1" currentCount="1"/>
+						<Property name="AnalogInput" maxCount="22" currentCount="0"/>
+						<Property name="AnalogOutput" maxCount="11" currentCount="0"/>
+						<Property name="BinaryInput" maxCount="40" currentCount="0"/>
+						<Property name="BinaryOutput" maxCount="28" currentCount="0"/>
+						<Property name="BinaryValue" maxCount="50" currentCount="0"/>
+						<Property name="AnalogValue" maxCount="90" currentCount="0"/>
+						<Property name="MultiStateValue" maxCount="10" currentCount="0"/>
+						<Property name="Schedule" maxCount="3" currentCount="0"/>
+						<Property name="Calendar" maxCount="2" currentCount="0"/>
+						<Property name="Notification Class" maxCount="3" currentCount="0"/>
+						<Property name="Network Port" maxCount="1" currentCount="1"/>
+					</Device>
+				</TreeNodeText>
+			</Ethernet>
+			<RS485>
+				<TreeNodeText>
+					<Device name="MODBUSRTUMaster" maxCount="100" currentCount="0"/>
+					<Device name="MODBUSRTUSlaves" maxCount="100" currentCount="0"/>
+				</TreeNodeText>
+			</RS485>
+		</Template>
+	</DeviceModel>
+	<DeviceModel Type="XBLD-14E">
+		<Template name="Template">
+			<Ethernet>
+				<TreeNodeText>
+					<Device name="MODBUSTCPClient" maxCount="640" currentCount="0"/>
+					<Device name="BacNet">
+						<Property name="Device" maxCount="1" currentCount="1"/>
+						<Property name="AnalogInput" maxCount="80" currentCount="0"/>
+						<Property name="AnalogOutput" maxCount="80" currentCount="0"/>
+						<Property name="BinaryInput" maxCount="80" currentCount="0"/>
+						<Property name="BinaryOutput" maxCount="80" currentCount="0"/>
+						<Property name="BinaryValue" maxCount="1000" currentCount="0"/>
+						<Property name="AnalogValue" maxCount="1000" currentCount="0"/>
+						<Property name="MultiStateValue" maxCount="100" currentCount="0"/>
+						<Property name="Schedule" maxCount="5" currentCount="0"/>
+						<Property name="Calendar" maxCount="3" currentCount="0"/>
+						<Property name="Notification Class" maxCount="5" currentCount="0"/>
+						<Property name="Network Port" maxCount="1" currentCount="1"/>
+					</Device>
+					<Device name="MQTT" maxCount="10"/>
+				</TreeNodeText>
+			</Ethernet>
+			<RS485>
+				<TreeNodeText>
+					<Device name="MODBUSRTUMaster" maxCount="640" currentCount="0"/>
+				</TreeNodeText>
+			</RS485>
+		</Template>
+	</DeviceModel>
+	<DeviceModel Type="XBLD-17E">
+		<Template name="Template">
+			<Ethernet>
+				<TreeNodeText>
+					<Device name="MODBUSTCPClient" maxCount="640" currentCount="0"/>
+					<Device name="BacNet">
+						<Property name="Device" maxCount="1" currentCount="1"/>
+						<Property name="AnalogInput" maxCount="80" currentCount="0"/>
+						<Property name="AnalogOutput" maxCount="80" currentCount="0"/>
+						<Property name="BinaryInput" maxCount="80" currentCount="0"/>
+						<Property name="BinaryOutput" maxCount="80" currentCount="0"/>
+						<Property name="BinaryValue" maxCount="1000" currentCount="0"/>
+						<Property name="AnalogValue" maxCount="1000" currentCount="0"/>
+						<Property name="MultiStateValue" maxCount="100" currentCount="0"/>
+						<Property name="Schedule" maxCount="5" currentCount="0"/>
+						<Property name="Calendar" maxCount="3" currentCount="0"/>
+						<Property name="Notification Class" maxCount="5" currentCount="0"/>
+						<Property name="Network Port" maxCount="1" currentCount="1"/>
+					</Device>
+					<Device name="MQTT" maxCount="10"/>
+				</TreeNodeText>
+			</Ethernet>
+			<RS485>
+				<TreeNodeText>
+					<Device name="MODBUSRTUMaster" maxCount="640" currentCount="0"/>
+				</TreeNodeText>
+			</RS485>
+		</Template>
+	</DeviceModel>
+	<DeviceModel Type="XM-14-DT-E">
+		<Template name="Template">
+			<Ethernet>
+				<TreeNodeText>
+					<Device name="MODBUSTCPServer" maxCount="200" currentCount="0"/>
+					<Device name="MODBUSTCPClient" maxCount="200" currentCount="0"/>
+					<Device name="MQTT" maxCount="100"/>
+				</TreeNodeText>
+			</Ethernet>
+			<RS485>
+				<TreeNodeText>
+					<Device name="MODBUSRTUMaster" maxCount="100" currentCount="0"/>
+					<Device name="MODBUSRTUSlaves" maxCount="100" currentCount="0"/>
+				</TreeNodeText>
+			</RS485>
+		</Template>
+	</DeviceModel>
+	<DeviceModel Type="XM-17-ADT-E">
+		<Template name="Template">
+			<Ethernet>
+				<TreeNodeText>
+					<Device name="MODBUSTCPServer" maxCount="200" currentCount="0"/>
+					<Device name="MODBUSTCPClient" maxCount="200" currentCount="0"/>
+					<Device name="MQTT" maxCount="100" />
+				</TreeNodeText>
+			</Ethernet>
+			<RS485>
+				<TreeNodeText>
+					<Device name="MODBUSRTUMaster" maxCount="100" currentCount="0"/>
+					<Device name="MODBUSRTUSlaves" maxCount="100" currentCount="0"/>
+				</TreeNodeText>
+			</RS485>
+		</Template>
+	</DeviceModel>
+	<DeviceModel Type="XM-14-DT-HIO-E">
+		<Template name="Template">
+			<Ethernet>
+				<TreeNodeText>
+					<Device name="MODBUSTCPServer" maxCount="200" currentCount="0"/>
+					<Device name="MODBUSTCPClient" maxCount="200" currentCount="0"/>
+					<Device name="MQTT" maxCount="100" />
+				</TreeNodeText>
+			</Ethernet>
+			<RS485>
+				<TreeNodeText>
+					<Device name="MODBUSRTUMaster" maxCount="100" currentCount="0"/>
+					<Device name="MODBUSRTUSlaves" maxCount="100" currentCount="0"/>
+				</TreeNodeText>
+			</RS485>
+		</Template>
+	</DeviceModel>
+</SystemConfiguration>

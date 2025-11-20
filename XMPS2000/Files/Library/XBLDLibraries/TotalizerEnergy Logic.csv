@@ -1,0 +1,13 @@
+Block Type :- UDFB Block
+Inputs : 3
+Outputs : 1
+UDFBName : TotalizerEnergy
+DataType:Real Name:TotalizerEnergy Text:PowerE Type:Input
+DataType:Bool Name:TotalizerEnergy Text:EnableE Type:Input
+DataType:Bool Name:TotalizerEnergy Text:ResetE Type:Input
+DataType:Real Name:TotalizerEnergy Text:EnergyE Type:Output
+ (  ) = ([FN:MUL TC:- EN:Enabled  IN:PowerE IN:0.00027778 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:057]);======Comments
+ (  ) = (EnableE AND [FN:ADD TC:- EN:-  IN:EnergyE IN:P5:057 DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:EnergyE]);======Comments
+ (  ) = (ResetE AND [FN:MOV TC:- EN:-  IN:0.0 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:EnergyE]);======Comments
+User Defined Tags
+Model: TotalizerEnergy Tags, Label: Real, LogicalAddress: P5:057, Tag: PowerStep, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 350, ActualName: 

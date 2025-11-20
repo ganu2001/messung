@@ -1,0 +1,13 @@
+Block Type :- UDFB Block
+Inputs : 1
+Outputs : 1
+UDFBName : ABSLOUTE_BACD
+DataType:Real Name:ABSLOUTE_BACD Text:Input_Value Type:Input
+DataType:Real Name:ABSLOUTE_BACD Text:Output_Value Type:Output
+ (  ) = ([FN:GE TC:- EN:-  IN:Input_Value IN:0 DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:033]);======Comments
+ (  ) = (Positive_Value AND [FN:MOV TC:- EN:Enabled  IN:Input_Value DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output_Value]);======Comments
+ (  ) = ([FN:LT TC:- EN:-  IN:Input_Value IN:0 DT:0005 DTN:Real OPC:0135 OPT:02 OPTN:Memory  OP:F2:034]);======Comments
+ (  ) = (Negative_Value AND [FN:MUL TC:- EN:Enabled  IN:Input_Value IN:-1.0 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:Output_Value]);======Comments
+User Defined Tags
+Model: ABSLOUTE_BACD Tags, Label: Bool, LogicalAddress: F2:033, Tag: Positive_Value, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 104, ActualName: 
+Model: ABSLOUTE_BACD Tags, Label: Bool, LogicalAddress: F2:034, Tag: Negative_Value, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 105, ActualName: 

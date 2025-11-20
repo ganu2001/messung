@@ -1,0 +1,22 @@
+Block Type :- UDFB Block
+Inputs : 3
+Outputs : 1
+UDFBName : HumidityRatio
+DataType:Real Name:HumidityRatio Text:Humi_HR Type:Input
+DataType:Real Name:HumidityRatio Text:Tempi_HR Type:Input
+DataType:Real Name:HumidityRatio Text:Press_HR Type:Input
+DataType:Real Name:HumidityRatio Text:Hum_Ratio Type:Output
+ (  ) = ([FN:DIV TC:- EN:-  IN:Humi_HR IN:100.0 DT:0005 DTN:Real OPC:0075 OPT:02 OPTN:Memory  OP:P5:042]);======Comments
+ (  ) = ([FN:MUL TC:- EN:-  IN:Tempi_HR IN:0.443 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:043]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:043 IN:6.11 DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:044]);======Comments
+ (  ) = ([FN:MUL TC:- EN:-  IN:P5:042 IN:P5:044 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:045]);======Comments
+ (  ) = ([FN:MUL TC:- EN:-  IN:P5:045 IN:0.622 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:046]);======Comments
+ (  ) = ([FN:SUB TC:- EN:-  IN:Press_HR IN:P5:045 DT:0005 DTN:Real OPC:0055 OPT:02 OPTN:Memory  OP:P5:047]);======Comments
+ (  ) = ([FN:DIV TC:- EN:-  IN:P5:046 IN:P5:047 DT:0005 DTN:Real OPC:0075 OPT:02 OPTN:Memory  OP:Hum_Ratio]);======Comments
+User Defined Tags
+Model: HumidityRatio Tags, Label: Real, LogicalAddress: P5:042, Tag: RH_Frac_HR, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 335, ActualName: 
+Model: HumidityRatio Tags, Label: Real, LogicalAddress: P5:043, Tag: Tem_Fact_HR, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 336, ActualName: 
+Model: HumidityRatio Tags, Label: Real, LogicalAddress: P5:044, Tag: P_WS, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 337, ActualName: 
+Model: HumidityRatio Tags, Label: Real, LogicalAddress: P5:045, Tag: P_V, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 338, ActualName: 
+Model: HumidityRatio Tags, Label: Real, LogicalAddress: P5:046, Tag: Num_rator, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 339, ActualName: 
+Model: HumidityRatio Tags, Label: Real, LogicalAddress: P5:047, Tag: Deno_minator, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 340, ActualName: 

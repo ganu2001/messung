@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80389A5F-8F35-40E2-8183-F7A779A78C12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Interpreter</RootNamespace>
+    <AssemblyName>Interpreter</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigConversion\ConfigInterpreter.cs" />
+    <Compile Include="ConfigConversion\ConfigInterpreter1.cs" />
+    <Compile Include="ConfigConversion\ModbusFunctionCode.cs" />
+    <Compile Include="ExpressionLogic\CompilerException.cs" />
+    <Compile Include="ExpressionLogic\ExceptionCheck.cs" />
+    <Compile Include="ExpressionLogic\CompilerOperations.cs" />
+    <Compile Include="ExpressionLogic\OperatorList.cs" />
+    <Compile Include="ExpressionLogic\RungToExpression.cs" />
+    <Compile Include="MCodeConversion\Addresses.cs" />
+    <Compile Include="MCodeConversion\DataType.cs" />
+    <Compile Include="MCodeConversion\Helpers\FinalRungOperations.cs" />
+    <Compile Include="MCodeConversion\Helpers\TestAddress.cs" />
+    <Compile Include="MCodeConversion\Instruction.cs" />
+    <Compile Include="MCodeConversion\InterpreterOperatorList.cs" />
+    <Compile Include="MCodeConversion\Operand.cs" />
+    <Compile Include="MCodeConversion\ParseExp.cs" />
+    <Compile Include="MCodeConversion\Rung.cs" />
+    <Compile Include="MCodeConversion\RungOperands.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XMPS2000.Core\XMPS2000.Core.csproj">
+      <Project>{b2a25334-1aa1-4248-ba04-e94e3b44a8e8}</Project>
+      <Name>XMPS2000.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

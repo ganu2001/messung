@@ -1,0 +1,10 @@
+Block Type :- UDFB Block
+Inputs : 2
+Outputs : 1
+UDFBName : TOGGLE_BACD
+DataType:Bool Name:TOGGLE_BACD Text:TOGGLE Type:Input
+DataType:Bool Name:TOGGLE_BACD Text:RESET Type:Input
+DataType:Bool Name:TOGGLE_BACD Text:OUTPUT Type:Output
+ ( OUTPUT{S} ) = (TOGGLE{P} AND  ~OUTPUT);======Comments
+ ( OUTPUT{R} ) = (((TOGGLE{P} AND  OUTPUT ) OR ( RESET{P} AND OUTPUT ) ));======Comments
+User Defined Tags
