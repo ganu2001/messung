@@ -1,0 +1,47 @@
+Block Type :- UDFB Block
+Inputs : 11
+Outputs : 1
+UDFBName : MULTIPLEXER_BACD
+DataType:Real Name:MULTIPLEXER_BACD Text:Input0 Type:Input
+DataType:Real Name:MULTIPLEXER_BACD Text:Input1 Type:Input
+DataType:Real Name:MULTIPLEXER_BACD Text:Input2 Type:Input
+DataType:Real Name:MULTIPLEXER_BACD Text:Input3 Type:Input
+DataType:Real Name:MULTIPLEXER_BACD Text:Input4 Type:Input
+DataType:Real Name:MULTIPLEXER_BACD Text:Input5 Type:Input
+DataType:Real Name:MULTIPLEXER_BACD Text:Input6 Type:Input
+DataType:Real Name:MULTIPLEXER_BACD Text:Input7 Type:Input
+DataType:Real Name:MULTIPLEXER_BACD Text:Input8 Type:Input
+DataType:Real Name:MULTIPLEXER_BACD Text:Input9 Type:Input
+DataType:Int Name:MULTIPLEXER_BACD Text:Select Type:Input
+DataType:Real Name:MULTIPLEXER_BACD Text:Output Type:Output
+ (  ) = ([FN:EQ TC:- EN:Enabled  IN:Select IN:0 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:067]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:1 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:068]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:2 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:069]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:3 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:070]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:4 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:071]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:5 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:072]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:6 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:073]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:7 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:074]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:8 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:075]);======Comments
+ (  ) = ([FN:EQ TC:- EN:-  IN:Select IN:9 DT:0004 DTN:Int OPC:0154 OPT:02 OPTN:Memory  OP:F2:076]);======Comments
+ (  ) = (EQ_0 AND [FN:MOV TC:- EN:Enabled  IN:Input0 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output]);======Comments
+ (  ) = (EQ_1 AND [FN:MOV TC:- EN:Enabled  IN:Input1 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output]);======Comments
+ (  ) = (EQ_2 AND [FN:MOV TC:- EN:Enabled  IN:Input2 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output]);======Comments
+ (  ) = (EQ_3 AND [FN:MOV TC:- EN:Enabled  IN:Input3 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output]);======Comments
+ (  ) = (EQ_4 AND [FN:MOV TC:- EN:Enabled  IN:Input4 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output]);======Comments
+ (  ) = (EQ_5 AND [FN:MOV TC:- EN:Enabled  IN:Input5 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output]);======Comments
+ (  ) = (EQ_6 AND [FN:MOV TC:- EN:Enabled  IN:Input6 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output]);======Comments
+ (  ) = (EQ_7 AND [FN:MOV TC:- EN:Enabled  IN:Input7 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output]);======Comments
+ (  ) = (EQ_8 AND [FN:MOV TC:- EN:Enabled  IN:Input8 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output]);======Comments
+ (  ) = (EQ_9 AND [FN:MOV TC:- EN:Enabled  IN:Input9 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Output]);======Comments
+User Defined Tags
+Model: MULTIPLEXER_BACD Tags, Label: Bool, LogicalAddress: F2:067, Tag: EQ_0, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 200, ActualName: 
+Model: MULTIPLEXER_BACD Tags, Label: Bool, LogicalAddress: F2:068, Tag: EQ_1, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 201, ActualName: 
+Model: MULTIPLEXER_BACD Tags, Label: Bool, LogicalAddress: F2:069, Tag: EQ_2, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 202, ActualName: 
+Model: MULTIPLEXER_BACD Tags, Label: Bool, LogicalAddress: F2:070, Tag: EQ_3, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 203, ActualName: 
+Model: MULTIPLEXER_BACD Tags, Label: Bool, LogicalAddress: F2:071, Tag: EQ_4, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 204, ActualName: 
+Model: MULTIPLEXER_BACD Tags, Label: Bool, LogicalAddress: F2:072, Tag: EQ_5, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 205, ActualName: 
+Model: MULTIPLEXER_BACD Tags, Label: Bool, LogicalAddress: F2:073, Tag: EQ_6, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 206, ActualName: 
+Model: MULTIPLEXER_BACD Tags, Label: Bool, LogicalAddress: F2:074, Tag: EQ_7, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 207, ActualName: 
+Model: MULTIPLEXER_BACD Tags, Label: Bool, LogicalAddress: F2:075, Tag: EQ_8, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 208, ActualName: 
+Model: MULTIPLEXER_BACD Tags, Label: Bool, LogicalAddress: F2:076, Tag: EQ_9, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 209, ActualName: 

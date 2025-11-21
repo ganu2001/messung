@@ -1,0 +1,14 @@
+Block Type :- UDFB Block
+Inputs : 3
+Outputs : 1
+UDFBName : BETWEEN
+DataType:Real Name:BETWEEN Text:Low_Limit Type:Input
+DataType:Real Name:BETWEEN Text:High_Limit Type:Input
+DataType:Bool Name:BETWEEN Text:Out_Bit Type:Output
+DataType:Real Name:BETWEEN Text:Input_Value Type:Input
+ (  ) = ([FN:GE TC:- EN:Enabled  IN:Input_Value IN:Low_Limit DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:000]);======Comments
+ (  ) = ([FN:LE TC:- EN:-  IN:Input_Value IN:High_Limit DT:0005 DTN:Real OPC:0145 OPT:02 OPTN:Memory  OP:F2:001]);======Comments
+ ( Out_Bit ) = (GE_DONE AND  LE_DONE);======Comments
+User Defined Tags
+Model: BETWEEN Tags, Label: Bool, LogicalAddress: F2:000, Tag: GE_DONE, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 53, ActualName: 
+Model: BETWEEN Tags, Label: Bool, LogicalAddress: F2:001, Tag: LE_DONE, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 54, ActualName: 

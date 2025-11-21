@@ -1,0 +1,20 @@
+Block Type :- UDFB Block
+Inputs : 3
+Outputs : 1
+UDFBName : Relative_Humidity
+DataType:Real Name:Relative_Humidity Text:Temp_RH Type:Input
+DataType:Real Name:Relative_Humidity Text:Press_RH Type:Input
+DataType:Real Name:Relative_Humidity Text:Enth_RH Type:Input
+DataType:Real Name:Relative_Humidity Text:RelHum Type:Output
+ (  ) = ([FN:MUL TC:- EN:-  IN:Temp_RH IN:1.006 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:048]);======Comments
+ (  ) = ([FN:SUB TC:- EN:-  IN:Enth_RH IN:P5:048 DT:0005 DTN:Real OPC:0055 OPT:02 OPTN:Memory  OP:P5:049]);======Comments
+ (  ) = ([FN:MUL TC:- EN:-  IN:Temp_RH IN:1.86 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:050]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:050 IN:2501 DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:051]);======Comments
+ (  ) = ([FN:DIV TC:- EN:-  IN:P5:049 IN:P5:051 DT:0005 DTN:Real OPC:0075 OPT:02 OPTN:Memory  OP:P5:052]);======Comments
+ (  ) = ([FN:MUL TC:- EN:-  IN:P5:052 IN:100.0 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:RelHum]);======Comments
+User Defined Tags
+Model: Relative_Humidity Tags, Label: Real, LogicalAddress: P5:048, Tag: Sensibl_RH, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 341, ActualName: 
+Model: Relative_Humidity Tags, Label: Real, LogicalAddress: P5:049, Tag: Numr_RH, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 342, ActualName: 
+Model: Relative_Humidity Tags, Label: Real, LogicalAddress: P5:050, Tag: TemLat_RH, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 343, ActualName: 
+Model: Relative_Humidity Tags, Label: Real, LogicalAddress: P5:051, Tag: DenMinatr_RH, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 344, ActualName: 
+Model: Relative_Humidity Tags, Label: Real, LogicalAddress: P5:052, Tag: RH_Fract, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 345, ActualName: 

@@ -1,0 +1,95 @@
+Block Type :- UDFB Block
+Inputs : 10
+Outputs : 3
+UDFBName : MinMaxAverage
+DataType:Real Name:MinMaxAverage Text:IN1A Type:Input
+DataType:Real Name:MinMaxAverage Text:IN2A Type:Input
+DataType:Real Name:MinMaxAverage Text:IN3A Type:Input
+DataType:Real Name:MinMaxAverage Text:IN4A Type:Input
+DataType:Real Name:MinMaxAverage Text:IN5A Type:Input
+DataType:Real Name:MinMaxAverage Text:IN6A Type:Input
+DataType:Real Name:MinMaxAverage Text:IN7A Type:Input
+DataType:Real Name:MinMaxAverage Text:IN8A Type:Input
+DataType:Real Name:MinMaxAverage Text:IN9A Type:Input
+DataType:Real Name:MinMaxAverage Text:IN10A Type:Input
+DataType:Real Name:MinMaxAverage Text:Min_A Type:Output
+DataType:Real Name:MinMaxAverage Text:Max_A Type:Output
+DataType:Real Name:MinMaxAverage Text:Average_A Type:Output
+ (  ) = ([FN:MOV TC:- EN:-  IN:IN1A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Min_A]);======Initialize Values from Input1
+ (  ) = ([FN:MOV TC:- EN:-  IN:IN1A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Max_A]);======Comments
+ (  ) = ([FN:MOV TC:- EN:-  IN:0.0 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:P5:008]);======Comments
+ (  ) = ([FN:MOV TC:- EN:-  IN:10 DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:P5:009]);======Comments
+ (  ) = ([FN:LT TC:- EN:-  IN:IN1A IN:Min_A DT:0005 DTN:Real OPC:0135 OPT:02 OPTN:Memory  OP:F2:088]);======Min/Max Comparison + Sum Calculation_Input1
+ (  ) = (INV_Min AND [FN:MOV TC:- EN:-  IN:IN1A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Min_A]);======Comments
+ (  ) = ([FN:GE TC:- EN:-  IN:IN1A IN:Max_A DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:089]);======Comments
+ (  ) = (INV_Max AND [FN:MOV TC:- EN:Enabled  IN:IN1A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Max_A]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:008 IN:IN1A DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:008]);======Comments
+ (  ) = ([FN:LT TC:- EN:-  IN:IN2A IN:Min_A DT:0005 DTN:Real OPC:0135 OPT:02 OPTN:Memory  OP:F2:090]);======Min/Max Comparison + Sum Calculation_Input2
+ (  ) = (INV2_Min AND [FN:MOV TC:- EN:Enabled  IN:IN2A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Min_A]);======Comments
+ (  ) = ([FN:GE TC:- EN:-  IN:IN2A IN:Max_A DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:091]);======Comments
+ (  ) = (INV2_Max AND [FN:MOV TC:- EN:Enabled  IN:IN2A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Max_A]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:008 IN:IN2A DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:008]);======Comments
+ (  ) = ([FN:LT TC:- EN:-  IN:IN3A IN:Min_A DT:0005 DTN:Real OPC:0135 OPT:02 OPTN:Memory  OP:F2:092]);======Min/Max Comparison + Sum Calculation_Input3
+ (  ) = (INV3_Min AND [FN:MOV TC:- EN:Enabled  IN:IN3A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Min_A]);======Comments
+ (  ) = ([FN:GE TC:- EN:-  IN:IN3A IN:Max_A DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:093]);======Comments
+ (  ) = (INV3_Max AND [FN:MOV TC:- EN:Enabled  IN:IN3A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Max_A]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:008 IN:IN3A DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:008]);======Comments
+ (  ) = ([FN:LT TC:- EN:-  IN:IN4A IN:Min_A DT:0005 DTN:Real OPC:0135 OPT:02 OPTN:Memory  OP:F2:094]);======Min/Max Comparison + Sum Calculation_Input4
+ (  ) = (INV4_Min AND [FN:MOV TC:- EN:Enabled  IN:IN4A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Min_A]);======Comments
+ (  ) = ([FN:GE TC:- EN:-  IN:IN4A IN:Max_A DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:095]);======Comments
+ (  ) = (INV4_Max AND [FN:MOV TC:- EN:Enabled  IN:IN4A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Max_A]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:008 IN:IN4A DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:008]);======Comments
+ (  ) = ([FN:LT TC:- EN:-  IN:IN5A IN:Min_A DT:0005 DTN:Real OPC:0135 OPT:02 OPTN:Memory  OP:F2:096]);======Min/Max Comparison + Sum Calculation_Input5
+ (  ) = (INV5_Min AND [FN:MOV TC:- EN:Enabled  IN:IN5A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Min_A]);======Comments
+ (  ) = ([FN:GE TC:- EN:-  IN:IN5A IN:Max_A DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:097]);======Comments
+ (  ) = (INV5_Max AND [FN:MOV TC:- EN:Enabled  IN:IN5A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Max_A]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:008 IN:IN5A DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:008]);======Comments
+ (  ) = ([FN:LT TC:- EN:-  IN:IN6A IN:Min_A DT:0005 DTN:Real OPC:0135 OPT:02 OPTN:Memory  OP:F2:098]);======Min/Max Comparison + Sum Calculation_Input6
+ (  ) = (INV6_Min AND [FN:MOV TC:- EN:Enabled  IN:IN6A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Min_A]);======Comments
+ (  ) = ([FN:GE TC:- EN:-  IN:IN6A IN:Max_A DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:099]);======Comments
+ (  ) = (INV6_Max AND [FN:MOV TC:- EN:Enabled  IN:IN6A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Max_A]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:008 IN:IN6A DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:008]);======Comments
+ (  ) = ([FN:LT TC:- EN:-  IN:IN7A IN:Min_A DT:0005 DTN:Real OPC:0135 OPT:02 OPTN:Memory  OP:F2:100]);======Min/Max Comparison + Sum Calculation_Input7
+ (  ) = (INV7_Min AND [FN:MOV TC:- EN:Enabled  IN:IN7A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Min_A]);======Comments
+ (  ) = ([FN:GE TC:- EN:-  IN:IN7A IN:Max_A DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:101]);======Comments
+ (  ) = (INV7_Max AND [FN:MOV TC:- EN:Enabled  IN:IN7A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Max_A]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:008 IN:IN7A DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:008]);======Comments
+ (  ) = ([FN:LT TC:- EN:-  IN:IN8A IN:Min_A DT:0005 DTN:Real OPC:0135 OPT:02 OPTN:Memory  OP:F2:102]);======Min/Max Comparison + Sum Calculation_Input8
+ (  ) = (INV8_Min AND [FN:MOV TC:- EN:Enabled  IN:IN8A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Min_A]);======Comments
+ (  ) = ([FN:GE TC:- EN:-  IN:IN8A IN:Max_A DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:103]);======Comments
+ (  ) = (INV8_Max AND [FN:MOV TC:- EN:Enabled  IN:IN8A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Max_A]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:008 IN:IN8A DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:008]);======Comments
+ (  ) = ([FN:LT TC:- EN:-  IN:IN9A IN:Min_A DT:0005 DTN:Real OPC:0135 OPT:02 OPTN:Memory  OP:F2:104]);======Min/Max Comparison + Sum Calculation_Input9
+ (  ) = (INV9_Min AND [FN:MOV TC:- EN:Enabled  IN:IN9A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Min_A]);======Comments
+ (  ) = ([FN:GE TC:- EN:-  IN:IN9A IN:Max_A DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:105]);======Comments
+ (  ) = (INV9_Max AND [FN:MOV TC:- EN:Enabled  IN:IN9A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Max_A]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:008 IN:IN9A DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:008]);======Comments
+ (  ) = ([FN:LT TC:- EN:-  IN:IN10A IN:Min_A DT:0005 DTN:Real OPC:0135 OPT:02 OPTN:Memory  OP:F2:106]);======Min/Max Comparison + Sum Calculation_Input10
+ (  ) = (INV10_Min AND [FN:MOV TC:- EN:Enabled  IN:IN10A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Min_A]);======Comments
+ (  ) = ([FN:GE TC:- EN:-  IN:IN10A IN:Max_A DT:0005 DTN:Real OPC:0125 OPT:02 OPTN:Memory  OP:F2:107]);======Comments
+ (  ) = (INV10_Max AND [FN:MOV TC:- EN:Enabled  IN:IN10A DT:0005 DTN:Real OPC:0095 OPT:02 OPTN:Memory  OP:Max_A]);======Comments
+ (  ) = ([FN:ADD TC:- EN:-  IN:P5:008 IN:IN10A DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:P5:008]);======Comments
+ (  ) = ([FN:DIV TC:- EN:-  IN:P5:008 IN:P5:009 DT:0005 DTN:Real OPC:0075 OPT:02 OPTN:Memory  OP:Average_A]);======Calculate Average
+User Defined Tags
+Model: MinMaxAverage Tags, Label: Real, LogicalAddress: P5:008, Tag: Sum_A, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 214, ActualName: 
+Model: MinMaxAverage Tags, Label: Real, LogicalAddress: P5:009, Tag: Count_A, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 215, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:088, Tag: INV_Min, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 216, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:089, Tag: INV_Max, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 217, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:090, Tag: INV2_Min, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 218, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:091, Tag: INV2_Max, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 219, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:092, Tag: INV3_Min, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 220, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:093, Tag: INV3_Max, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 221, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:094, Tag: INV4_Min, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 222, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:095, Tag: INV4_Max, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 223, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:096, Tag: INV5_Min, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 224, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:097, Tag: INV5_Max, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 225, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:098, Tag: INV6_Min, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 226, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:099, Tag: INV6_Max, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 227, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:100, Tag: INV7_Min, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 228, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:101, Tag: INV7_Max, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 229, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:102, Tag: INV8_Min, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 230, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:103, Tag: INV8_Max, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 231, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:104, Tag: INV9_Min, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 232, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:105, Tag: INV9_Max, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 233, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:106, Tag: INV10_Min, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 234, ActualName: 
+Model: MinMaxAverage Tags, Label: Bool, LogicalAddress: F2:107, Tag: INV10_Max, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 235, ActualName: 

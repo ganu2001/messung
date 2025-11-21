@@ -1,0 +1,22 @@
+Block Type :- UDFB Block
+Inputs : 5
+Outputs : 1
+UDFBName : LINEAR_BACD
+DataType:Real Name:LINEAR_BACD Text:Input Type:Input
+DataType:Real Name:LINEAR_BACD Text:X1 Type:Input
+DataType:Real Name:LINEAR_BACD Text:Y1 Type:Input
+DataType:Real Name:LINEAR_BACD Text:X2 Type:Input
+DataType:Real Name:LINEAR_BACD Text:Y2 Type:Input
+DataType:Real Name:LINEAR_BACD Text:Output Type:Output
+ (  ) = ([FN:SUB TC:- EN:Enabled  IN:Y2 IN:Y1 DT:0005 DTN:Real OPC:0055 OPT:02 OPTN:Memory  OP:P5:082]);======Comments
+ (  ) = ([FN:SUB TC:- EN:-  IN:Input IN:X1 DT:0005 DTN:Real OPC:0055 OPT:02 OPTN:Memory  OP:P5:083]);======Comments
+ (  ) = ([FN:SUB TC:- EN:-  IN:X2 IN:X1 DT:0005 DTN:Real OPC:0055 OPT:02 OPTN:Memory  OP:P5:084]);======Comments
+ (  ) = ([FN:MUL TC:- EN:Enabled  IN:P5:082 IN:P5:083 DT:0005 DTN:Real OPC:0065 OPT:02 OPTN:Memory  OP:P5:085]);======Comments
+ (  ) = ([FN:DIV TC:- EN:Enabled  IN:P5:085 IN:P5:084 DT:0005 DTN:Real OPC:0075 OPT:02 OPTN:Memory  OP:P5:086]);======Comments
+ (  ) = ([FN:ADD TC:- EN:Enabled  IN:P5:086 IN:Y1 DT:0005 DTN:Real OPC:0045 OPT:02 OPTN:Memory  OP:Output]);======Comments
+User Defined Tags
+Model: LINEAR_BACD Tags, Label: Real, LogicalAddress: P5:082, Tag: Y2_MIN_Y1, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 230, ActualName: 
+Model: LINEAR_BACD Tags, Label: Real, LogicalAddress: P5:083, Tag: Input_Min_X1, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 231, ActualName: 
+Model: LINEAR_BACD Tags, Label: Real, LogicalAddress: P5:084, Tag: X2_MIN_X1, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 232, ActualName: 
+Model: LINEAR_BACD Tags, Label: Real, LogicalAddress: P5:085, Tag: Y2_Y1_Mul_In_X1, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 233, ActualName: 
+Model: LINEAR_BACD Tags, Label: Real, LogicalAddress: P5:086, Tag: Division_OP, IOList: NIL, Type: DataType, InitialValue: , Retentive: False, ShowLogicalAddress: False, RetentiveAddress: , Mode: , Editable: False, Key: 234, ActualName: 
