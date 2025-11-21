@@ -432,7 +432,7 @@ namespace XMPS2000
             TreeNode selectedNode = tvProjects.SelectedNode;
             if (selectedNode == null)
             {
-                MessageBox.Show("Please select a Resistance Table node first and try again.", "XMPS 2000", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a Resistancess Table node first and try again.", "XMPS 2000", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
