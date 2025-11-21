@@ -37,7 +37,7 @@ using XMPS2000.LadderLogic;
 using XMPS2000.UndoRedoGridLayout;
 using OpenFileDialog = System.Windows.Forms.OpenFileDialog;
 using SaveFileDialog = System.Windows.Forms.SaveFileDialog;
-//public delegate void CrossReferenceEventHandler(string tagname, object sender, EventArgs e);
+//public and delegate void CrossReferenceEventHandler(string tagname, object sender, EventArgs e);
 
 namespace XMPS2000
 {
